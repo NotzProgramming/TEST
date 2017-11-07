@@ -1,0 +1,24 @@
+﻿@model Vidly.ViewModels.CustomerViewModel
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{var check = false;}
+@foreach (var customer in Model.Customer)
+{
+    var urlString = Url.Action();
+    var id = "/Customers/Detail/" + customer.Id.ToString();
+    check = urlString.Equals(id);
+
+    if (check)
+    {
+       <h2>@customer.Name</h2>
+    }
+}
+
+
+
+
+
+

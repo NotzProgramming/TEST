@@ -1,0 +1,28 @@
+﻿@model Vidly.ViewModels.MoviesViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+
+<h2>Movies</h2>
+
+<table style="width:100%">
+    <tr><td>Movie</td></tr>
+    @foreach (var movie in Model.movie)
+    {
+        <tr><td>@movie.Name</td></tr>
+    }
+</table>
